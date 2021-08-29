@@ -1,0 +1,34 @@
+@import "variables";
+
+@mixin font-face($font-family, $url, $namePath, $font-weight: 400, $font-style: normal) {
+  @font-face {
+    font-family: "#{$font-family}";
+    src:
+      local("#{$url}"),
+      url("../fonts/#{$namePath}/#{$url}.eot?#iefix") format("embedded-opentype"),
+      url("../fonts/#{$namePath}/#{$url}.woff") format("woff"),
+      url("../fonts/#{$namePath}/#{$url}.ttf") format("truetype");
+    font-style: $font-style;
+    font-weight: $font-weight;
+    font-display: swap;
+  }
+}
+
+/* remember
+
+Thin, Hairline	100
+Extra Light, Ultra Light	200
+Light	300
+Normal, Regular	400
+Medium	500
+Semi Bold, Demi Bold	600
+Bold	700
+Extra Bold, Ultra Bold	800
+Black, Heavy	900
+
+ end */
+
+@include font-face("Geometria", "Geometria", "GeometriaFonts", 400);
+@include font-face("Geometria", "Geometria-Medium", "GeometriaFonts", 500);
+@include font-face("Geometria", "Geometria-Bold", "GeometriaFonts", 700);
+@include font-face("Caveat", "Caveat-Regular", "Caveat", 400);

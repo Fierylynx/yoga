@@ -1,0 +1,8 @@
+{% macro select(options=[], classname='custom-select', placeholder='select-option') %}
+    <select class={{ classname }}>
+        <option value="hide">{{ placeholder }}</option>
+        {% for option in options %}
+            <option value={{ option.value }}>{{ option.label }}</option>
+        {% endfor %}
+    </select>
+{% endmacro %}

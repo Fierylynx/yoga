@@ -1,0 +1,38 @@
+.team {
+  padding-bottom: 70px;
+  &__item {
+    padding: 0 15px;
+  }
+  &__card {
+    display: flex;
+    margin-bottom: 25px;
+  }
+  &__photo {
+    width: 82px;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  &__description {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    background-color: $color-white;
+  }
+  &__text {
+    width: 75px;
+    margin-right: 22px;
+  }
+  &__name {
+    display: block;
+    margin-bottom: 7px;
+    color: $color-pink;
+  }
+  &__content p:not(:last-child) {
+    margin-bottom: 10px;
+  }
+  &__experience {
+    display: block;
+    margin-bottom: 15px;
+    color: $color-pink;
+  }
+}

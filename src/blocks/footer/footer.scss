@@ -1,0 +1,32 @@
+@import "../../common/scss/variables";
+@import "../../common/scss/mixins";
+
+.footer {
+  padding: 50px 0;
+  color: $color-white;
+  background-color: $color-purple;
+  &__list {
+    width: 150px;
+    margin-bottom: 30px;
+    font-size: 12px;
+  }
+  &__item:not(:last-child) {
+    margin-bottom: 30px;
+  }
+  &__title {
+    display: block;
+    margin-bottom: 7px;
+    font-size: 14px;
+  }
+  &__link {
+    padding: 14px 0;
+  }
+  &__bottom {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.5);
+  }
+  &__copyright {
+    display: block;
+    margin-bottom: 20px;
+  }
+}

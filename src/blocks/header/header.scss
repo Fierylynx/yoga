@@ -1,0 +1,53 @@
+.header {
+  position: fixed;
+  right: 0;
+  left: 0;
+  z-index: 999;
+  @include media(M) {
+    margin-top: 30px;
+    &__wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+}
+
+.menu {
+  text-align: right;
+  &__burger {
+    position: relative;
+    font-size: 0;
+    background-color: transparent;
+    border: none;
+    z-index: 999;
+    &::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      transform: scaleX(-1);
+      width: 30px;
+      height: 15px;
+      background-image: url(../img/icons/burger.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+    }
+  }
+  &__list {
+    display: none;
+  }
+  @include media(M) {
+    &__burger {
+      padding: 14px 0 14px 20px;
+      font-size: 12px;
+      &::after {
+        top: 16px;
+        left: 0;
+        transform: scaleX(1);
+        width: 13px;
+        height: 7px;
+      }
+    }
+  }
+}

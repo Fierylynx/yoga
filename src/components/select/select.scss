@@ -1,0 +1,75 @@
+@import "../../common/scss/variables";
+
+.select-hidden {
+  display: none;
+  padding-right: 10px;
+  visibility: hidden;
+}
+
+.select {
+  position: relative;
+  display: inline-block;
+  flex-grow: 1;
+  font-size: 16px;
+  cursor: pointer;
+  transition: border-color, 0.3s;
+  &:not(:last-child) {
+    padding-right: 20px;
+  }
+}
+
+.select-styled {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  user-select: none;
+  padding: 8px 30px 8px 15px;
+  transition: all 0.2s ease-in;
+  &:active,
+  &.active {
+    //background-color: #f9f9f9;
+    &::after {
+      top: 39%;
+      transform: rotate(90deg);
+      transition: 0.3s;
+    }
+  }
+}
+
+.select-text {
+  width: 100%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.select-options {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  left: 0;
+  display: none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background: #fff;
+  overflow: hidden;
+  z-index: 999;
+  li {
+    margin: 0;
+    padding: 8px 15px;
+    font-size: 14px;
+    color: #1a2b48;
+    transition: all 0.15s ease-in;
+    &:hover {
+      background: #f2f2f2;
+    }
+    &[rel="hide"] {
+      display: none;
+    }
+  }
+}
