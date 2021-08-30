@@ -6,7 +6,6 @@
   color: $color-white;
   background-color: $color-purple;
   &__list {
-    width: 150px;
     margin-bottom: 30px;
     font-size: 12px;
   }
@@ -28,5 +27,15 @@
   &__copyright {
     display: block;
     margin-bottom: 20px;
+  }
+  @include media(M) {
+    &__list {
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 336px;
+    }
+    &__item {
+      width: 50%;
+    }
   }
 }
