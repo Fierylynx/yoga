@@ -19,6 +19,7 @@
     color: $color-pink;
     background-color: transparent;
     border: none;
+    cursor: pointer;
   }
   &__list {
     display: flex;
@@ -27,7 +28,6 @@
   }
   &__item {
     width: 100%;
-    padding: 0 15px;
   }
   &__item:not(:last-child) {
     margin-bottom: 30px;
@@ -68,6 +68,9 @@
     &__item {
       max-width: 176px;
     }
+    &__item:not(:last-child) {
+      margin-bottom: 0;
+    }
     &__caption {
       font-size: 18px;
     }
@@ -80,6 +83,27 @@
     }
     &__button {
       display: none;
+    }
+  }
+  @include media(XL) {
+    padding: 70px 0;
+    &__title {
+      margin-bottom: 54px;
+    }
+    &__filters {
+      margin-bottom: 50px;
+    }
+    &__filter:not(:last-child) {
+      margin-right: 55px;
+    }
+    &__item {
+      max-width: 263px;
+    }
+    &__article {
+      padding: 54px;
+    }
+    &__price {
+      font-size: 30px;
     }
   }
 }

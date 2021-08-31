@@ -1,14 +1,10 @@
 .team {
   padding-bottom: 70px;
-  &__item {
-    padding: 0 15px;
-  }
   &__card {
     display: flex;
     margin-bottom: 25px;
   }
   &__photo {
-    width: 82px;
     background-repeat: no-repeat;
     background-size: cover;
   }
@@ -17,9 +13,9 @@
     align-items: center;
     padding: 15px;
     background-color: $color-white;
+    box-shadow: 0 4px 25px rgba(142, 128, 169, 0.2);
   }
   &__text {
-    width: 75px;
     margin-right: 22px;
   }
   &__name {
@@ -34,5 +30,92 @@
     display: block;
     margin-bottom: 15px;
     color: $color-pink;
+  }
+  @include media(M) {
+    &__title {
+      margin-bottom: 75px;
+    }
+    &__article {
+      display: flex;
+    }
+    &__card {
+      position: relative;
+      align-self: start;
+      width: 50%;
+      margin-left: 15px;
+    }
+    &__photo {
+      position: absolute;
+      bottom: 10px;
+      left: -15px;
+      width: 100%;
+    }
+    &__image {
+      max-width: 91px;
+    }
+    &__description {
+      padding: 10px 10px 10px 84px;
+    }
+    &__name {
+      max-width: 90px;
+    }
+    &__content {
+      width: 50%;
+    }
+    &__caption {
+      display: block;
+      margin-bottom: 7px;
+      font-size: 16px;
+      font-weight: 700;
+    }
+    &__experience {
+      font-size: 12px;
+    }
+    &__social {
+      justify-content: center;
+      margin-bottom: 20px;
+      & img {
+        width: 10px;
+        height: 7px;
+      }
+    }
+    &__button {
+      font-size: 10px;
+      line-height: 167%;
+      text-decoration: underline;
+    }
+  }
+  @include media(XL) {
+    padding: 70px 0;
+    &__title {
+      margin-bottom: 120px;
+    }
+    &__image {
+      max-width: 144px;
+    }
+    &__description {
+      padding: 19px 25px 19px 140px;
+    }
+    &__text {
+      margin-right: 90px;
+    }
+    &__name {
+      margin-bottom: 10px;
+      line-height: 167%;
+    }
+    &__caption {
+      margin-bottom: 11px;
+      font-size: 18px;
+    }
+    &__experience {
+      margin-bottom: 24px;
+      font-size: 14px;
+    }
+    &__content p {
+      line-height: 167%;
+    }
+    &__content p:not(:last-child) {
+      margin-bottom: 17px;
+    }
   }
 }

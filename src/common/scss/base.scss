@@ -25,6 +25,9 @@ html {
   -webkit-tap-highlight-color: transparent;
   scroll-behavior: smooth;
   direction: ltr;
+  @include media(XL) {
+    font-size: 12px;
+  }
 }
 
 body {

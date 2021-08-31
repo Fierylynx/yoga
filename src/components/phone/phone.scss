@@ -7,4 +7,7 @@
   @include media(M) {
     margin: 0;
   }
+  @include media(M) {
+    font-size: 16px;
+  }
 }

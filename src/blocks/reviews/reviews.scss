@@ -3,10 +3,14 @@
   &__item {
     max-width: 442px;
     margin: 0 auto;
+  }
+  &__article {
     padding: 15px 15px 30px;
     background-color: $color-white;
   }
   &__quote {
+    width: 25px;
+    height: 25px;
     margin-bottom: 15px;
   }
   &__content {
@@ -33,5 +37,20 @@
     display: block;
     margin-bottom: 10px;
     color: rgba(142, 128, 169, 0.7);
+  }
+  @include media(M) {
+    &__article {
+      padding: 30px 70px;
+    }
+    &__content p {
+      font-size: 12px;
+      line-height: 167%;
+    }
+  }
+  @include media(XL) {
+    padding: 70px 0 140px;
+    &__title {
+      margin-bottom: 62px;
+    }
   }
 }

@@ -2,6 +2,7 @@
   position: relative;
   text-align: center;
   background-repeat: no-repeat;
+  background-position: center bottom;
   background-size: cover;
   &__wrapper {
     display: flex;
@@ -60,6 +61,24 @@
       margin-top: auto;
       margin-bottom: 50px;
       font-size: 12px;
+    }
+  }
+  @include media(XL) {
+    &__caption {
+      padding-left: 150px;
+      font-size: 45px;
+    }
+    &__subtitle {
+      padding-left: 120px;
+      font-size: 265px;
+      line-height: 100%;
+    }
+    &__text {
+      max-width: 190px;
+      font-size: 14px;
+    }
+    &__bottom {
+      font-size: 16px;
     }
   }
 }

@@ -6,6 +6,7 @@
   padding: 13px 15px;
   background-color: $color-pink;
   border: none;
+  cursor: pointer;
   &--direction {
     padding: 13px 21px;
     background-color: $color-purple;
@@ -20,6 +21,9 @@
     background-position: center;
     background-size: cover;
   }
+  @include media(XL) {
+    padding: 24px 28px;
+  }
 }
 
 .button {
@@ -30,7 +34,9 @@
   color: $color-white;
   background-color: $color-purple;
   border: none;
+  cursor: pointer;
   &--form {
+    width: 100%;
     padding: 21px 67px;
     font-size: 14px;
     background-color: $color-pink;

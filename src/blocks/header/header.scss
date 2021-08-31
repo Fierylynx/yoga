@@ -3,12 +3,24 @@
   right: 0;
   left: 0;
   z-index: 999;
+  &--scroll {
+    margin-top: 0;
+    background-color: #fff;
+    transition: background-color 1s, margin-top 1s;
+  }
   @include media(M) {
     margin-top: 30px;
     &__wrapper {
       display: flex;
       align-items: center;
       justify-content: space-between;
+    }
+  }
+  @include media(XL) {
+    margin-top: 70px;
+    &--scroll {
+      margin-top: 0;
+      background-color: #fff;
     }
   }
 }
@@ -20,6 +32,7 @@
     font-size: 0;
     background-color: transparent;
     border: none;
+    cursor: pointer;
     z-index: 999;
     &::after {
       content: "";
@@ -47,6 +60,16 @@
         transform: scaleX(1);
         width: 13px;
         height: 7px;
+      }
+    }
+  }
+  @include media(XL) {
+    &__burger {
+      padding: 14px 0 14px 36px;
+      font-size: 16px;
+      &::after {
+        width: 24px;
+        height: 12px;
       }
     }
   }

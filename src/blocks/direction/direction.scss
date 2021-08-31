@@ -1,12 +1,11 @@
 .direction {
-  padding-bottom: 70px;
+  padding: 70px 0;
   &__list {
     display: flex;
     flex-wrap: wrap;
   }
   &__item {
     width: 100%;
-    padding: 0 15px;
   }
   &__item:not(:last-child) {
     margin-bottom: 30px;
@@ -16,7 +15,6 @@
     flex-direction: column;
   }
   &__image {
-    min-height: 200px;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -46,13 +44,13 @@
   @include media(M) {
     &__list {
       display: grid;
-      grid-template-columns: 247px 350px;
+      grid-template-columns: 247px auto;
       grid-template-rows: auto;
+      column-gap: 34px;
       grid-template-areas:
         "column row-1"
-        "column row-2";
-      justify-content: space-between;
-      min-height: 332px;
+        "column row-2"
+        "column row-3";
     }
     &__item {
       &--column {
@@ -64,14 +62,88 @@
       &--row-2 {
         grid-area: row-2;
       }
+      &--row-3 {
+        align-self: flex-end;
+        grid-area: row-3;
+      }
     }
     &__item:not(:last-child) {
       margin-bottom: 0;
     }
-    &__article {
-      &--row {
-        flex-direction: row;
+    &__article--row {
+      flex-direction: row;
+      .direction__img {
+        width: 100%;
+        max-width: 148px;
       }
+      .direction__trainer-wrapper {
+        display: flex;
+      }
+      .direction__trainer {
+        max-width: 125px;
+        margin-right: 20px;
+      }
+      .direction__button {
+        padding: 10px 15px;
+        background-color: $color-purple;
+      }
+    }
+    &__button--more {
+      width: 100%;
+      text-align: center;
+      color: $color-purple;
+      background-color: $color-white;
+      box-shadow: 0 4px 25px rgba(142, 128, 169, 0.2);
+    }
+  }
+  @include media(XL) {
+    &__title {
+      margin-bottom: 65px;
+    }
+    &__list {
+      grid-template-columns: 366px 525px;
+    }
+    &__content {
+      padding: 42px 10px 26px 46px;
+    }
+    &__trainer {
+      width: 100%;
+      max-width: 125px;
+    }
+    &__article--row {
+      .direction__image {
+        width: 100%;
+        max-width: 220px;
+      }
+      .direction__img {
+        width: 100%;
+        max-width: 220px;
+      }
+      .direction__wrapper {
+        width: 100%;
+      }
+      .direction__content {
+        padding: 33px;
+      }
+      .direction__trainer {
+        margin-right: 67px;
+      }
+      .direction__button {
+        padding: 15px 23px;
+      }
+    }
+    &__caption {
+      margin-bottom: 13px;
+      font-size: 16px;
+    }
+    &__time {
+      margin-bottom: 16px;
+      & p {
+        margin-bottom: 5px;
+      }
+    }
+    &__button--more {
+      padding: 19px 10px;
     }
   }
 }

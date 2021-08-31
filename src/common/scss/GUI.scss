@@ -21,4 +21,7 @@
   @include media(M) {
     font-size: 21px;
   }
+  @include media(XL) {
+    font-size: 30px;
+  }
 }
