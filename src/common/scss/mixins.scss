@@ -1,6 +1,6 @@
 @import "variables";
 
-@mixin container($mw: 955px, $px: 15px) {
+@mixin container($mw: 955px, $px: 35px) {
   width: 100%;
   max-width: $mw;
   margin-right: auto;
@@ -8,7 +8,8 @@
   padding-right: $px;
   padding-left: $px;
   &--big {
-    max-width: 1160px;
+    max-width: 1190px;
+    padding: 0 15px;
   }
   @include media(M) {
     padding-right: 72px;

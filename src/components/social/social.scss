@@ -1,24 +1,6 @@
 .social {
-  &__item:not(:last-child) {
-    margin-bottom: 20px;
-  }
-  &__item--reviews:not(:last-child) {
-    margin-right: 10px;
-    margin-bottom: 0;
-  }
-  &--footer {
-    margin-bottom: 40px;
-  }
-  &--reviews {
-    display: flex;
-    align-items: center;
-  }
   @include media(M) {
     display: flex;
     align-items: center;
-    &__item:not(:last-child) {
-      margin-right: 6px;
-      margin-bottom: 0;
-    }
   }
 }

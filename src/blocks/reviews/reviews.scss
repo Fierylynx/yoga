@@ -1,5 +1,6 @@
 .reviews {
-  padding-bottom: 70px;
+  margin-bottom: 85px;
+  padding: 35px 0 30px;
   &__item {
     max-width: 442px;
     margin: 0 auto;
@@ -10,13 +11,16 @@
   }
   &__quote {
     width: 25px;
-    height: 25px;
-    margin-bottom: 15px;
+    height: 30px;
+    margin-bottom: 12px;
   }
   &__content {
-    margin-bottom: 20px;
+    margin-bottom: 25px;
+    & p {
+      line-height: 150%;
+    }
     & p:not(:last-child) {
-      margin-bottom: 10px;
+      margin-bottom: 15px;
     }
   }
   &__card {
@@ -24,33 +28,49 @@
   }
   &__photo {
     width: 52px;
-    margin-right: 15px;
+    margin-right: 14px;
     background-repeat: no-repeat;
     background-size: cover;
   }
   &__name {
     display: block;
+    margin-bottom: 6px;
     font-size: 12px;
     color: rgba(230, 92, 123, 0.7);
   }
   &__data {
     display: block;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
     color: rgba(142, 128, 169, 0.7);
   }
-  @include media(M) {
-    &__article {
-      padding: 30px 70px;
+  &__social {
+    display: flex;
+    align-items: center;
+    .social__item {
+      margin-right: 10px;
+      margin-bottom: 0;
     }
-    &__content p {
-      font-size: 12px;
-      line-height: 167%;
+  }
+  @include media(M) {
+    margin-bottom: 527px;
+    &__article {
+      padding: 30px 57px 30px 87px;
+    }
+    &__content {
+      & p {
+        font-size: 12px;
+        line-height: 167%;
+      }
     }
   }
   @include media(XL) {
-    padding: 70px 0 140px;
+    margin-bottom: 0;
+    padding: 70px 0 147px;
     &__title {
-      margin-bottom: 62px;
+      margin-bottom: 55px;
+    }
+    &__data {
+      font-size: 10px;
     }
   }
 }
