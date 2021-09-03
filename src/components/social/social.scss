@@ -1,6 +1,15 @@
 .social {
+  & svg {
+    fill: $color-purple;
+    transition: fill 0.5s;
+  }
   @include media(M) {
     display: flex;
     align-items: center;
+    & svg {
+      &:hover {
+        fill: $color-pink;
+      }
+    }
   }
 }

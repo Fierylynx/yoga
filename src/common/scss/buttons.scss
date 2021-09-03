@@ -6,11 +6,8 @@
   padding: 13px 15px;
   background-color: $color-pink;
   border: none;
+  transition: background-color 0.5s, background-image 0.5s;
   cursor: pointer;
-  &--direction {
-    padding: 13px 21px;
-    background-color: $color-purple;
-  }
   &::after {
     content: "";
     position: absolute;
@@ -20,6 +17,12 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+  }
+  &:hover {
+    background-color: $color-purple;
+  }
+  &:hover::after {
+    background-image: url(../img/icons/arrow.svg);
   }
   @include media(XL) {
     padding: 24px 28px;
@@ -34,11 +37,21 @@
   color: $color-white;
   background-color: $color-purple;
   border: none;
+  transition: background-color 0.5s, color 0.5s;
   cursor: pointer;
-  &--form {
-    width: 100%;
-    padding: 21px;
-    font-size: 14px;
+  &:hover {
     background-color: $color-pink;
+  }
+}
+
+.button-slider {
+  padding: 10px 15px;
+  background-color: transparent;
+  border: 1px solid $color-purple;
+  &::after {
+    background-image: url(../img/icons/arrow-purple.svg);
+  }
+  @include media(XL) {
+    padding: 15px 23px;
   }
 }

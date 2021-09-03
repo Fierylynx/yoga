@@ -5,6 +5,13 @@
   @include container();
 }
 
+@include media(XL) {
+  .container__big {
+    max-width: 1190px;
+    padding: 0 15px;
+  }
+}
+
 .visually-hidden {
   position: absolute;
   clip: rect(0 0 0 0);

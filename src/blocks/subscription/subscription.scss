@@ -74,6 +74,14 @@
     &__filter:not(:last-child) {
       margin-right: 33px;
     }
+    &__filter-button {
+      padding: 0;
+      border-bottom: 1px solid transparent;
+      transition: border-bottom 0.5s;
+      &:hover {
+        border-bottom: 1px solid $color-pink;
+      }
+    }
     &__list {
       justify-content: space-between;
     }

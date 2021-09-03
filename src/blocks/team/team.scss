@@ -1,15 +1,19 @@
 .team {
+  position: relative;
   padding: 35px 0 26px;
   &__title {
     margin-bottom: 36px;
   }
-  &__item {
+  &__article {
     max-width: 228px;
     margin: 0 auto;
   }
   &__card {
     display: flex;
     margin-bottom: 23px;
+    &--hide {
+      display: none;
+    }
   }
   &__photo {
     width: 100%;
@@ -55,10 +59,32 @@
     margin-bottom: 15px;
     color: $color-pink;
   }
+  // &__button-mobile {
+  //   position: absolute;
+  //   top: 28px;
+  //   z-index: 200;
+  // }
+  &__button-prev {
+    transform: rotate(180deg);
+  }
+  // &__button-next {
+  //   right: 0;
+  // }
+  &__pagination {
+    display: none;
+  }
   @include media(M) {
-    margin-bottom: 160px;
     &__title {
       margin-bottom: 68px;
+    }
+    &__slider {
+      width: 100%;
+    }
+    &__article {
+      max-width: 100%;
+    }
+    &__list {
+      padding-top: 35px;
     }
     &__item {
       max-width: 100%;
@@ -67,17 +93,28 @@
       display: flex;
       justify-content: space-between;
     }
+    &__card-wrapper {
+      width: 50%;
+      margin-bottom: 28px;
+    }
     &__card {
       position: relative;
       align-self: start;
       width: 100%;
       max-width: 254px;
-      margin-left: 17px;
+      margin-bottom: 0;
+      margin-left: 15px;
+      &:not(:last-child) {
+        margin-bottom: 57px;
+      }
+      &--hide {
+        display: inline-block;
+      }
     }
     &__photo {
       position: absolute;
       bottom: 11px;
-      left: -14px;
+      left: -15px;
       width: 100%;
       max-width: 91px;
       min-height: 91px;
@@ -123,29 +160,48 @@
       font-size: 10px;
       line-height: 167%;
       text-decoration: underline;
+      transition: color 0.5s;
+      cursor: pointer;
+      &:hover {
+        color: $color-pink;
+      }
+    }
+    &__button-wrapper {
+      display: flex;
+      align-items: center;
+      margin-left: 160px;
+    }
+    &__pagination {
+      position: relative;
+      bottom: 0;
+      display: inline-block;
+      width: 45px;
     }
   }
   @include media(XL) {
-    margin-bottom: 217px;
     padding: 70px 0;
     &__title {
       margin-bottom: 110px;
     }
+    &__card-wrapper {
+      margin-bottom: 44px;
+    }
     &__card {
       max-width: 398px;
       margin-left: 0;
+      padding: 56px 0 0 26px;
+      &:not(:last-child) {
+        margin-bottom: 40px;
+      }
     }
     &__photo {
       bottom: 18px;
-      left: -24px;
+      left: 0;
       max-width: 142px;
       min-height: 142px;
     }
     &__description {
       padding: 19px 25px 19px 140px;
-    }
-    &__text {
-      margin-right: 90px;
     }
     &__name {
       margin-bottom: 12px;
@@ -179,6 +235,13 @@
     }
     &__content p:not(:last-child) {
       margin-bottom: 17px;
+    }
+    &__button-wrapper {
+      margin-left: 236px;
+    }
+    &__pagination {
+      width: 66px;
+      font-size: 16px;
     }
   }
 }

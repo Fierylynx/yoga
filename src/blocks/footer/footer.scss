@@ -27,6 +27,15 @@
       color: #c8c0db;
     }
   }
+  &__button {
+    width: 100%;
+    padding: 21px;
+    font-size: 14px;
+    background-color: $color-pink;
+    &:hover {
+      background-color: $color-purple;
+    }
+  }
   @include media(M) {
     padding: 74px 0 148px;
     &__title {
@@ -114,6 +123,12 @@
       }
       &:nth-child(3) {
         margin-bottom: 0;
+      }
+    }
+    &__link {
+      transition: color 0.5s;
+      &:hover {
+        color: $color-pink;
       }
     }
     &__social {
