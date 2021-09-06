@@ -3,7 +3,7 @@
 
 const paths = {
   src: './src',
-  dist: './docs',
+  dist: './dist',
 
   njk: {
     src: [
