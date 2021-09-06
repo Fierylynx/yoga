@@ -18,6 +18,7 @@
   &__photo {
     width: 100%;
     max-width: 82px;
+    background-size: cover;
   }
   &__description {
     display: flex;
@@ -74,6 +75,9 @@
     display: none;
   }
   @include media(M) {
+    &::after {
+      content: "04";
+    }
     &__title {
       margin-bottom: 68px;
     }
@@ -114,7 +118,7 @@
     &__photo {
       position: absolute;
       bottom: 11px;
-      left: -15px;
+      left: -13px;
       width: 100%;
       max-width: 91px;
       min-height: 91px;
@@ -183,15 +187,18 @@
     &__title {
       margin-bottom: 110px;
     }
+    &__list {
+      padding-top: 53px;
+    }
     &__card-wrapper {
-      margin-bottom: 44px;
+      margin: 0 54px 44px 0;
     }
     &__card {
-      max-width: 398px;
+      max-width: 421px;
       margin-left: 0;
-      padding: 56px 0 0 26px;
+      padding: 0 0 0 26px;
       &:not(:last-child) {
-        margin-bottom: 40px;
+        margin-bottom: 87px;
       }
     }
     &__photo {
@@ -237,7 +244,7 @@
       margin-bottom: 17px;
     }
     &__button-wrapper {
-      margin-left: 236px;
+      margin-left: 262px;
     }
     &__pagination {
       width: 66px;

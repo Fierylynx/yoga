@@ -12,7 +12,7 @@ $(window).on("scroll", function() {
 });
 
 
-const swiper = new Swiper('.swiper', {
+const swiper = new Swiper('.team__slider', {
   // Optional parameters
   direction: 'horizontal',
   loop: true,
@@ -47,4 +47,8 @@ const swiperReviews = new Swiper('.reviews__slider', {
     nextEl: '.reviews__button-next',
     prevEl: '.reviews__button-prev',
   },
+});
+
+$('.menu__burger').on('click', function() {
+  $('.menu__list').toggleClass('menu__list--active');
 });

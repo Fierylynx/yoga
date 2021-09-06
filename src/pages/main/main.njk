@@ -3,7 +3,7 @@
 {% from 'common/njk/scripts.njk' import scripts %}
 
 <html lang="en">
-  {{ head('index', 'Main page') }}
+{{ head('index', 'Main page') }}
 
 <body>
   <div class="app">
@@ -11,13 +11,15 @@
     {% include "blocks/header/header.njk" %}
 
     <main>
-    {% include "blocks/hero/hero.njk" %}
-    {% include "blocks/direction/direction.njk" %}
-    {% include "blocks/subscription/subscription.njk" %}
-    {% include "blocks/team/team.njk" %}
-    {% include "blocks/reviews/reviews.njk" %}
+      {% include "blocks/hero/hero.njk" %}
+      {% include "blocks/direction/direction.njk" %}
+      {% include "blocks/subscription/subscription.njk" %}
+      <div class="background-image" style="background-image: url(./assets/img/team-bg.png)">
+        {% include "blocks/team/team.njk" %}
+        {% include "blocks/reviews/reviews.njk" %}
+      </div>
     </main>
-    
+
     <!-- footer -->
     {% include "blocks/footer/footer.njk" %}
   </div>

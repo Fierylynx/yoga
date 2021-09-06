@@ -1,5 +1,7 @@
 .direction {
   padding: 70px 0 32px;
+  @include bg-image;
+  background-size: contain;
   &__card {
     margin-bottom: 30px;
     &--bottom {
@@ -11,12 +13,6 @@
     flex-direction: column;
     box-shadow: 0 4px 25px rgba(142, 128, 169, 0.2);
   }
-  &__image {
-    min-height: 200px;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-  }
   &__wrapper {
     display: flex;
   }
@@ -24,6 +20,9 @@
     width: 100%;
     padding: 18px 20px 14px;
     background-color: $color-white;
+  }
+  &__image {
+    margin-bottom: -3px;
   }
   &__caption {
     display: block;
@@ -58,14 +57,19 @@
   }
   @include media(M) {
     padding: 70px 0 83px;
+    &::after {
+      content: "02";
+    }
     &__title {
       margin-bottom: 37px;
     }
     &__inner {
       display: flex;
+      align-items: center;
       justify-content: center;
     }
     &__card {
+      margin-bottom: 0;
       &--column {
         max-width: 247px;
         margin-right: 22px;
@@ -79,6 +83,10 @@
     }
     &__content {
       padding: 18px 20px;
+    }
+    &__row {
+      width: 100%;
+      max-width: 354px;
     }
     &__article--row {
       flex-direction: row;
@@ -139,7 +147,7 @@
         margin-bottom: 28px;
       }
       &--row:nth-child(2) {
-        margin-bottom: 50px;
+        margin-bottom: 61px;
       }
     }
     &__content {
@@ -148,6 +156,9 @@
     &__trainer {
       width: 100%;
       max-width: 125px;
+    }
+    &__row {
+      max-width: 525px;
     }
     &__article--row {
       .direction__image {
@@ -162,7 +173,7 @@
         width: 100%;
       }
       .direction__content {
-        padding: 33px 34px;
+        padding: 28px 34px;
       }
       .direction__trainer {
         max-width: 126px;

@@ -21,18 +21,20 @@
   }
   @include media(XL) {
     margin-top: 55px;
-    &--scroll {
-      margin-top: 0;
-      background-color: #fff;
-    }
+    // &--scroll {
+    //   margin-top: 0;
+    //   background-color: #fff;
+    // }
   }
 }
 
 .menu {
   text-align: right;
-  font-size: 0;
   &__burger {
     position: relative;
+    width: 30px;
+    height: 15px;
+    padding: 20px 0;
     font-size: 0;
     background-color: transparent;
     border: none;
@@ -46,7 +48,6 @@
       transform: scaleX(-1);
       width: 30px;
       height: 15px;
-      padding: 23px 0;
       background-image: url(../img/icons/burger.svg);
       background-repeat: no-repeat;
       background-position: center;
@@ -58,13 +59,22 @@
   }
   &__list {
     display: none;
+    // &--active {
+    //   position: absolute;
+    //   top: 0;
+    //   right: 0;
+    //   left: 0;
+    //   display: inline-block;
+    //   width: 100%;
+    //   text-align: center;
+    // }
   }
   @include media(M) {
     &__burger {
       padding: 14px 0 14px 20px;
       font-size: 12px;
       &::after {
-        top: -3px;
+        top: 14px;
         left: 0;
         transform: scaleX(1);
         width: 13px;
@@ -74,10 +84,10 @@
   }
   @include media(XL) {
     &__burger {
-      padding: 14px 0 14px 36px;
+      padding: 14px 0 29px 36px;
       font-size: 16px;
       &::after {
-        top: 0;
+        top: 16px;
         width: 24px;
         height: 12px;
       }

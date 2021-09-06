@@ -52,6 +52,20 @@
     background-image: url(../img/icons/arrow-purple.svg);
   }
   @include media(XL) {
+    &--reviews {
+      background-color: $color-purple;
+      &:hover {
+        background-color: $color-white;
+      }
+      &::after {
+        background-image: url(../img/icons/arrow.svg);
+      }
+      &:hover::after {
+        background-image: url(../img/icons/arrow-purple.svg);
+      }
+    }
+  }
+  @include media(XL) {
     padding: 15px 23px;
   }
 }

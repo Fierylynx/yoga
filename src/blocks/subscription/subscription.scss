@@ -1,5 +1,6 @@
 .subscription {
   padding: 35px 0 33px;
+  @include bg-image;
   &__title {
     margin-bottom: 18px;
   }
@@ -13,7 +14,7 @@
     margin-right: 25px;
   }
   &__filter-button {
-    padding: 15px 0;
+    padding: 13px 0;
     font-size: 12px;
     font-weight: 500;
     color: $color-pink;
@@ -64,7 +65,10 @@
     line-height: 111%;
   }
   @include media(M) {
-    margin-bottom: 120px;
+    // margin-bottom: 120px;
+    &::after {
+      content: "03";
+    }
     &__title {
       margin-bottom: 4px;
     }
@@ -75,12 +79,8 @@
       margin-right: 33px;
     }
     &__filter-button {
-      padding: 0;
       border-bottom: 1px solid transparent;
       transition: border-bottom 0.5s;
-      &:hover {
-        border-bottom: 1px solid $color-pink;
-      }
     }
     &__list {
       justify-content: space-between;
@@ -102,12 +102,12 @@
       max-width: 120px;
     }
     &__price {
-      margin-bottom: 0;
+      // margin-bottom: 0;
       font-size: 21px;
     }
-    &__button {
-      display: none;
-    }
+    // &__button {
+    //   display: none;
+    // }
   }
   @include media(XL) {
     margin-bottom: 80px;
@@ -121,11 +121,20 @@
     &__filter:not(:last-child) {
       margin-right: 59px;
     }
+    &__filter-button {
+      padding: 0;
+      &:hover {
+        border-bottom: 1px solid $color-pink;
+      }
+    }
     &__item {
       max-width: 263px;
     }
     &__article {
       padding: 57px 54px;
+      &:hover {
+
+      }
     }
     &__caption {
       margin-bottom: 18px;

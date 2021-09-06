@@ -1,5 +1,4 @@
 .hero {
-  position: relative;
   text-align: center;
   background-repeat: no-repeat;
   background-position: center bottom;
@@ -23,7 +22,6 @@
   }
   &__subtitle {
     display: block;
-    padding-left: 20px;
     text-transform: uppercase;
     font-family: "Geometria", sans-serif;
     font-size: 67px;

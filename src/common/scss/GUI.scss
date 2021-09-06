@@ -12,6 +12,39 @@
   }
 }
 
+section {
+  position: relative;
+  @include media(M) {
+    &::after {
+      content: "01";
+      position: absolute;
+      top: 50%;
+      right: 30px;
+      transform: translateY(-45%);
+      font-size: 18px;
+      color: rgba(174, 164, 200, 0.5);
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: 0;
+      width: 20px;
+      height: 1px;
+      background-color: rgba(139, 126, 172, 0.73);
+    }
+  }
+  @include media(XL) {
+    &::after {
+      right: 68px;
+      font-size: 30px;
+    }
+    &::before {
+      width: 58px;
+    }
+  }
+}
+
 .visually-hidden {
   position: absolute;
   clip: rect(0 0 0 0);
