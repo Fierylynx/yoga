@@ -11,6 +11,7 @@
   }
   @include media(M) {
     margin: 0;
+    z-index: 999;
   }
   @include media(XL) {
     font-size: 16px;

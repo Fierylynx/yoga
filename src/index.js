@@ -52,3 +52,10 @@ const swiperReviews = new Swiper('.reviews__slider', {
 $('.menu__burger').on('click', function() {
   $('.menu__list').toggleClass('menu__list--active');
 });
+
+$(".menu a, .header__icon, .logo").on("click", function (event) {
+  event.preventDefault();
+  var id  = $(this).attr('href'),
+    top = $(id).offset().top;
+  $('body,html').animate({scrollTop: top}, 1500);
+});
